@@ -98,6 +98,7 @@ export class DevCard extends Phaser.GameObjects.Container {
         // Slightly increase brightness (lighter tint)
         this.background.setTint(0xFFFFAA);  // Lighter tint
         this.image.setTint(0xFFFFAA);       // Apply tint to the image
+        this.scale += 0.1
     }
 
     // Hover out effect (reset the tint)
@@ -105,6 +106,7 @@ export class DevCard extends Phaser.GameObjects.Container {
         // Reset the tint back to normal
         this.background.clearTint();
         this.image.clearTint();
+        this.scale -= 0.1
     }
 
     // Shake and light up when picked up
